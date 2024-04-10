@@ -384,3 +384,4 @@ Follow us!
 - [Solodit](https://solodit.xyz/)
 - [Cyfrin Twitter](https://twitter.com/CyfrinAudits)
 - [Patrick Collins YouTube](https://www.youtube.com/c/patrickcollins)
+# soc-minimized-repo
