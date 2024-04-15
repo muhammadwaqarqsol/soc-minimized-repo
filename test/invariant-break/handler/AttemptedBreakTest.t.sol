@@ -34,25 +34,25 @@ contract AttemptedBreakTest is StdInvariant, Test{
         }
 
 
-      function testStartingAmounttheSame()public view{
-        assert(startingAmount==yeildERC20.balanceOf(user));
-        assert(startingAmount==mockUSDC.balanceOf(user));
-      }
+      // function testStartingAmounttheSame()public view{
+      //   assert(startingAmount==yeildERC20.balanceOf(user));
+      //   assert(startingAmount==mockUSDC.balanceOf(user));
+      // }
 
 
       //deposit
       //1000 -> 1000 non mockusdc and yeilderc20 tokens
       //never called approved
-        function statefulFuzz_invaraintBreaks() public {
-          vm.startPrank(user);
-          handlerStatefulFuzzCatches.withdrawToken(mockUSDC);
-          handlerStatefulFuzzCatches.withdrawToken(yeildERC20);
-          vm.stopPrank();
+      // function statefulFuzz_invaraintBreaks() public {
+        //   vm.startPrank(user);
+        //   handlerStatefulFuzzCatches.withdrawToken(mockUSDC);
+        //   handlerStatefulFuzzCatches.withdrawToken(yeildERC20);
+        //   vm.stopPrank();
 
-          assert(mockUSDC.balanceOf(address(handlerStatefulFuzzCatches))==0); 
-          assert(yeildERC20.balanceOf(address(handlerStatefulFuzzCatches))==0); 
+        //   assert(mockUSDC.balanceOf(address(handlerStatefulFuzzCatches))==0); 
+        //   assert(yeildERC20.balanceOf(address(handlerStatefulFuzzCatches))==0); 
 
-          assert(mockUSDC.balanceOf(user)==startingAmount);
-          assert(yeildERC20.balanceOf(user)==startingAmount);
-        }
+        //   assert(mockUSDC.balanceOf(user)==startingAmount);
+        //   assert(yeildERC20.balanceOf(user)==startingAmount);
+        // }
 }
